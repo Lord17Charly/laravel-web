@@ -1,0 +1,285 @@
+/* Estilo de todo*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #ff6347;
+    padding: 1rem 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navbar ul li .icon {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    background-color: #ff4500;
+    transform: translateY(-2px);
+}
+
+/* Contenido principal */
+.content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content h2 {
+    color: #ff6347;
+    margin-bottom: 1rem;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form input[type="date"],
+form input[type="time"],
+form textarea {
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="file"]:focus,
+form input[type="date"]:focus,
+form input[type="time"]:focus,
+form textarea:focus {
+    border-color: #ff6347;
+}
+
+form button[type="submit"] {
+    padding: 0.8rem 1rem;
+    background-color: #ff6347;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form button[type="submit"] .icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+form button[type="submit"]:hover {
+    background-color: #ff4500;
+    transform: translateY(-2px);
+}
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin: 1rem 0;
+    text-align: center;
+}
+/* alerta exito */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/*tabla*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fdf7e3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+table thead {
+    background-color: #ff6347;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+table tbody tr {
+    transition: background-color 0.3s;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fff8ea;
+}
+
+table tbody tr:hover {
+    background-color: #ffd9b3;
+}
+
+table td img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #ff6347;
+    position: relative;
+}
+
+h1:before {
+    content: "🐾";
+    font-size: 32px;
+    position: absolute;
+    left: -40px;
+    top: 5px;
+}
+
+h1:after {
+    content: "🐾";
+    font-size: 32px;
+    position: absolute;
+    right: -40px;
+    top: 5px;
+}
+
+
+
+h1, h2 {
+    color: #ff6347;
+    text-align: center;
+}
+
+div[style*="display: flex;"] {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Estilos del formulario */
+form div {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form button {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #ff6347;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #ffd9b3;
+}
+
+table td img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
