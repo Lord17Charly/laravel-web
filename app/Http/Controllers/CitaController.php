@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -6,24 +7,29 @@ use App\Models\Cita;
 
 class CitaController extends Controller
 {
+    public function index()
+    {
+        $citas = Cita::all(); // Obtener todas las citas
+        return view('citas.index', compact('citas'));
+    }
+
     public function create()
     {
-        return view('citas.form');
+        return view('citas.form'); // Mostrar el formulario de creación
     }
 
     public function store(Request $request)
     {
-        // Validar y guardar los datos de la cita
         $validated = $request->validate([
-            'mascota_id' => 'required|exists:mascotas,id',
-            'servicio_id' => 'required|exists:servicios,id',
+            'mascota' => 'required',
+            'servicio' => 'required',
             'fecha' => 'required|date',
-            'hora' => 'required',
-            'estado' => 'required'
+            'hora' => 'required|date_format:H:i',
+            'notas' => 'nullable',
         ]);
 
-        Cita::create($validated);
+        Cita::create($validated); // Guardar los datos en la tabla
 
-        return redirect()->route('home')->with('success', 'Cita agregada con éxito');
+        return redirect()->route('citas.index')->with('success', '¡Cita creada con éxito!');
     }
 }

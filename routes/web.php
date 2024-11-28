@@ -24,3 +24,7 @@ Route::post('/citas', [CitaController::class, 'store'])->name('citas.store');
 
 Route::get('/servicios', [ServicioController::class, 'create'])->name('servicios.create');
 Route::post('/servicios', [ServicioController::class, 'store'])->name('servicios.store');
+
+Route::get('/citas', [CitaController::class, 'index'])->name('citas.index');
+Route::get('/citas/crear', [CitaController::class, 'create'])->name('citas.create');
+Route::post('/citas', [CitaController::class, 'store'])->name('citas.store');
